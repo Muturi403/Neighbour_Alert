@@ -19,3 +19,29 @@ class Category(models.Model):
 
   def __str__(self):
     return self.category
+  
+class Neighborhood(models.Model):
+  name = models.CharField(max_length=200)
+  location = models.ForeignKey(Location, on_delete=models.SET_NULL, null=True)
+  policehelpline = models.IntegerField(null=True, blank=True)
+  hospitalhelpline = models.IntegerField(null=True, blank=True)
+  occupants = models.IntegerField(default=0, null=True)
+
+  def __str__(self):
+    return self.name
+
+  def create_neigborhood(self):
+    self.save()
+
+  @classmethod
+  def delete_neigborhood(cls, id):
+    cls.objects.filter(id=id).delete()
+
+  @classmethod
+  def find_neigborhood(cls, searchterm):
+    searchresults = cls.objects.filter(Q(name__icontains=searchterm))
+    return searchresults
+
+  @classmethod
+  def update_neighborhood(cls, id, name):
+    cls.objects.filter(id=id).update(name=name)  
