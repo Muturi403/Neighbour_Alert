@@ -35,7 +35,7 @@ ALLOWED_HOSTS = ['.localhost','.herokuapp.com','127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
-    'neigbourwatch',
+    'neighbourwatch',
     'bootstrap4',
     'tinymce',
     'django.contrib.admin',
