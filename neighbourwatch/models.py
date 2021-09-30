@@ -76,21 +76,21 @@ class Business(models.Model):
 	neighborhood = models.ForeignKey(Neighborhood, on_delete=models.CASCADE, null=True)
 
 	def __str__(self):
-    return self.businessname
+		return self.businessname
 
 	def save_business(self):
-    self.save()
+		self.save()
 
 	@classmethod
 	def delete_business(cls, id): 
-    cls.objects.filter(id=id).delete()
+		cls.objects.filter(id=id).delete()
 
 	@classmethod
 	def searchbusiness(cls, searchterm):
-    searchresults = cls.objects.filter(Q(businessname__icontains = searchterm))
-    return searchresults  
+		searchresults = cls.objects.filter(Q(businessname__icontains = searchterm))
+		return searchresults  
   
- class Post(models.Model):
+class Post(models.Model):
   posttitle = models.CharField(max_length=200, null=False, blank=False)
   story = models.TextField()
   timeuploaded = models.DateTimeField(auto_now_add=True)
