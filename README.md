@@ -1,10 +1,10 @@
-### NEIGHBOUR ALERT
+## NEIGHBOUR ALERT
 
-#### Created on 24 July 2021
+### Created on 24 July 2021
 
 * By Muturi Faith
 
-#### Description
+### Description
 
 Have Created a WebApp that allows one to be in the loop about everything happening in one's neighbourhood. It has A section for post where the latest happenings are posted. It has contact information for Police and health services.
 
@@ -25,7 +25,7 @@ Follow this link <https://faineighbour.herokuapp.com/index/>
 
 It is hosted by heroku
 
-#### Setup and Installation
+### Setup and Installation
 
 To get the project .......
 
@@ -64,7 +64,7 @@ To get the project .......
 * python manage.py test neighbour
 * Open the application on your browser 127.0.0.1:8000.
 
-#### Technology used
+### Technology used
 
 * HTML
 * CSS
@@ -75,7 +75,7 @@ To get the project .......
 
 Heroku
 
-#### Bugs
+### Bugs
 
 None at the Moment
 
@@ -83,4 +83,4 @@ None at the Moment
 
 Email: faith.muturi@student.moringaschool.com
 
-#### License
+### License
